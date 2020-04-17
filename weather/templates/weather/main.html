@@ -1,0 +1,73 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="{% static 'weather/main.css' %}">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+          crossorigin="anonymous"></script>
+  <script src="{% static 'weather/wow.min.js' %}"></script>
+  <script src="{% static 'weather/main.js' %}"></script>
+
+  <title>WeatherApp</title>
+</head>
+<body>
+
+
+<div class="navbar wow fadeInDown" data-wow-delay="1s" id="navbar">
+  <div class="container d-flex justify-content-between">
+    <strong id="nav_str">WeatherApp</strong>
+  </div>
+</div>
+
+
+<div id="main">
+  <div class="container">
+    <h5 class="wow fadeIn" data-wow-delay="1s" id="main_h1">ПОГОДНОЕ ПРИЛОЖЕНИЕ</h5>
+  </div>
+  <div class="container wow fadeIn" data-wow-delay="1s" id="main_container">
+    <br>
+    <br>
+    <form method="post">
+      {% csrf_token %}
+      <label id="label" for="city_name"><h4><strong>Введите название города</strong></h4></label>
+      <div class="d-flex justify-content-end">
+        <input type="text" name="city_name" id="city_name" class="form-control"
+               placeholder="Введите название города">
+        <input type="submit" class="btn btn-dark" id="search">
+      </div>
+    </form>
+
+    <div class="row mt-3">
+      <div class="col-2 mt-4">
+        <h3 class="ml-5" id="city"><strong>{{ info.city }}</strong></h3>
+        <img class="ml-5" id="icon" src="https://www.weatherbit.io/static/img/icons/{{ info.icon }}.png" alt="Фото погоды">
+      </div>
+
+      <div class="col-2 mt-4">
+        <h4 class="ml-5" id="celsius">{{ info.temp }}</h4><br>
+      </div>
+
+      <div class="col-3 mt-4">
+        <h4 id="celsius"><sup>°C</sup></h4><br>
+      </div>
+
+      <div class="col-5 mt-5">
+        <h5>Ощущается <b id="app_temp">{{ info.app_temp }}</b>°C</h5>
+        <h5>Влажность <b id="rh">{{ info.rh }}</b>%</h5>
+        <h5>Скорость ветра <b id="wind_spd">{{ info.wind_spd }}</b> м/c</h5>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
