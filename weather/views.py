@@ -1,5 +1,6 @@
 import requests
 from django.shortcuts import render
+from .models import CityName
 
 
 def main(request):
@@ -22,6 +23,7 @@ def main(request):
 
     context = {
         'info': all_info,
+        'cities': CityName.objects.all()
     }
 
     return render(request, 'weather/main.html', context)

@@ -16,7 +16,7 @@ $(document).ready(function () {
                 $('#app_temp').empty().append(parseInt(resp['app_temp']))
                 $('#temp').empty().append(parseInt(resp['temp']))
                 $('#icon').removeAttr('src').attr('src', src_ing)
-                $('#city').empty().append($('#city_name').val())
+                $('#city').empty().append(`<strong>${$('#city_name').val()}</strong>`)
                 $('#rh').empty().append(resp['rh'])
                 $('#city_name').val('')
 
@@ -24,3 +24,4 @@ $(document).ready(function () {
         })
     })
 })
+
