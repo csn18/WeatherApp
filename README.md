@@ -2,12 +2,13 @@
 
 **Нужно написать простейшее погодное приложение**
 
+
 **Окружение:**
 
-Database - **SQLite3**
-Server - **Django 2.2 / Flask **
-Web - **Html/CSS/JavaScript**
-API - **На выбор разработчика**
+1. Database - **SQLite3**
+2. Server - **Django 2.2 / Flask**
+3. Web - **Html/CSS/JavaScript**
+4. API - **На выбор разработчика**
 
 **Задания:**
 
