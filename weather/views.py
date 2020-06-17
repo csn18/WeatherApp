@@ -8,6 +8,7 @@ def main(request):
 
     if request.method == 'POST':
         city = request.POST.get('city_name')
+        print(city)
     else:
         city = 'Kazan'
 

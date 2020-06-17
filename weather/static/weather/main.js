@@ -14,7 +14,7 @@ $(document).ready(function () {
 
                 $('#wind_spd').empty().append(parseInt(resp['wind_spd']))
                 $('#app_temp').empty().append(parseInt(resp['app_temp']))
-                $('#temp').empty().append(parseInt(resp['temp']))
+                $('#main_temp').empty().append(parseInt(resp['temp']))
                 $('#icon').removeAttr('src').attr('src', src_ing)
                 $('#city').empty().append(`<strong>${$('#city_name').val()}</strong>`)
                 $('#rh').empty().append(resp['rh'])

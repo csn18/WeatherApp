@@ -1,0 +1,7 @@
+version: "2"
+
+services:
+  server:
+    container_name: Weather_server
+    build: .
+    network_mode: 'host'

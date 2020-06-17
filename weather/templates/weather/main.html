@@ -6,12 +6,16 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <link rel="stylesheet" type="text/css" href="{% static 'weather/main.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
   <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
           crossorigin="anonymous"></script>
+
   <script src="{% static 'weather/wow.min.js' %}"></script>
   <script src="{% static 'weather/main.js' %}"></script>
 
@@ -52,7 +56,7 @@
       </div>
 
       <div class="col-2 mt-4">
-        <h4 class="ml-5" id="celsius">{{ info.temp }}</h4><br>
+        <h4 class="ml-5" id="main_temp">{{ info.temp }}</h4><br>
       </div>
 
       <div class="col-3 mt-4">
