@@ -1,3 +1,13 @@
+
+https://stark-harbor-99013.herokuapp.com/
+
+For run docker:
+
+$ docker-compose build
+
+$ docker-compose up 
+
+
 **Техническое задание**
 
 **Нужно написать простейшее погодное приложение**
